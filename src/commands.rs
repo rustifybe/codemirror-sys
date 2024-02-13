@@ -1,0 +1,13 @@
+use wasm_bindgen::prelude::*;
+use super::state::Extension;
+
+#[wasm_bindgen(module = "@codemirror/commands")]
+extern "C" {
+    pub fn history() -> Extension;
+
+    #[wasm_bindgen(js_name = "defaultKeymap")]
+    pub static DEFAULT_KEYMAP: js_sys::Array;
+    
+    #[wasm_bindgen(js_name = "historyKeymap")]
+    pub static HISTORY_KEYMAP: js_sys::Array;
+}
