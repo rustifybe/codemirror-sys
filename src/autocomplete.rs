@@ -9,10 +9,10 @@ extern "C" {
     #[wasm_bindgen(js_name = "autocompletion")]
     pub fn autocompletion() -> Extension;
 
-    #[wasm_bindgen(js_name = "completionKeymap")]
+    #[wasm_bindgen(thread_local_v2, js_name = "completionKeymap")]
     pub static COMPLETION_KEYMAP: js_sys::Array;
 
-    #[wasm_bindgen(js_name = "closeBracketsKeymap")]
+    #[wasm_bindgen(thread_local_v2, js_name = "closeBracketsKeymap")]
     pub static CLOSE_BRACKETS_KEYMAP: js_sys::Array;
 
 }

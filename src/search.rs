@@ -6,6 +6,6 @@ extern "C" {
     #[wasm_bindgen(js_name = "highlightSelectionMatches")]
     pub fn highlight_selection_matches() -> Extension;
 
-    #[wasm_bindgen(js_name = "searchKeymap")]
+    #[wasm_bindgen(thread_local_v2, js_name = "searchKeymap")]
     pub static SEARCH_KEYMAP: js_sys::Array;
 }
