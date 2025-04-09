@@ -20,9 +20,9 @@ extern "C" {
         options: Option<js_sys::Object>
     ) -> Extension;
 
-    #[wasm_bindgen(js_name = "defaultHighlightStyle")]
+    #[wasm_bindgen(thread_local_v2, js_name = "defaultHighlightStyle")]
     pub static DEFAULT_HIGHLIGHT_STYLE: HighlightStyle;
 
-    #[wasm_bindgen(js_name = "foldKeymap")]
+    #[wasm_bindgen(thread_local_v2, js_name = "foldKeymap")]
     pub static FOLD_KEYMAP: js_sys::Array;
 }

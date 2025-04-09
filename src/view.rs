@@ -58,7 +58,7 @@ extern "C" {
     #[wasm_bindgen(js_name = "highlightActiveLine")]
     pub fn highlight_active_line() -> Extension;
 
-    #[wasm_bindgen(js_name = "keymap")]
+    #[wasm_bindgen(thread_local_v2, js_name = "keymap")]
     pub static KEYMAP: Facet;
 
 }
