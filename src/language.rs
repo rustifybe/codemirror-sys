@@ -3,6 +3,7 @@ use super::state::Extension;
 
 #[wasm_bindgen(module = "@codemirror/language")]
 extern "C" {
+    #[derive(Clone)]
     pub type HighlightStyle;
 
     #[wasm_bindgen(js_name = "foldGutter")]
